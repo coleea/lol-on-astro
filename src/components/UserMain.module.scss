@@ -1,0 +1,24 @@
+.wrapper {
+    margin-left: 8px;
+    width: 690px;
+
+    .gameCategory{
+        border: 1px solid #cdd2d2;
+        box-shadow: 0 1px #dcdfdf;
+        display: flex;
+        flex : 10px 10px 10px;
+        height: 36px;
+        padding : 0 0 0 10px;
+        background: #f2f2f2;
+        line-height: 36px;
+    
+        .CategoryAll, .CategorySolo, .CategoryFree {
+            margin : 0 10px 0 10px ;
+        }    
+        .focusdMenu {
+            color: #1f8ecd;
+            font-weight: bold;
+            border-bottom: 2px solid #1f8ecd;
+        }
+    }     
+}

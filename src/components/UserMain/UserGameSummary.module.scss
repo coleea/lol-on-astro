@@ -1,0 +1,198 @@
+.wrapper {
+    height: 154px;
+    border: 1px solid #cdd2d2;
+    box-shadow: 0 1px #dcdfdf;
+    background: #ededed;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    .gameSummary {
+        display: grid;
+        grid-template-columns : 114px 161px 230px 184px;
+        height: 100%;    
+        .winLoseStats {
+            display: flex;
+            margin-top: 5px;    
+            text-align: center;
+            width: 90px;
+            margin-left: 24px;
+            .battleRecord {
+                text-align: center;
+                font-size: 12px;
+                color: #666666;
+                line-height: 40px;
+            }
+            
+            .winRate {
+                position: relative;
+                top : -56px;
+                font-weight: bold;
+                font-size: 14px;
+            }            
+        }
+        .kda,.favoriteChampions {
+            border-right: 1px solid #cdd2d2;
+        }
+        
+        
+        .kda {
+            text-align: center;
+            color: #555e5e;
+            text-align: center;
+            vertical-align: top;
+            padding-top: 18px;
+
+            .kdaInnerWrapper {
+                position: relative;
+                top : 40px;
+                .kdaUpperInfo {
+                    position: relative;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                }
+                .kdaUpperInfoUnitCenter{
+                    color:#c6443e;
+                }                
+                .kdaUpperInfoUnitFirst::after {
+                    content: " /\00a0";
+                }
+                .kdaUpperInfoUnitCenter::after {
+                    content: " /\00a0";
+                    color: black;
+                }
+                .kdaBottomInfo {
+                    display: flex;
+                    justify-content:center;
+                    color: #353a3a;
+                    font-size: 16px;
+                    line-height: 36px;
+                    .kda_over3 {
+                        color : #2daf7f;
+                        font-weight: bold;
+                    }
+                    .kda_over4 {
+                        color : #1f8ecd;
+                        font-weight: bold;
+                    }
+                    .kda_over5 {
+                        color : #e19205;
+                        font-weight: bold;
+                    }                
+                    .kdaNm {
+                
+                    }                
+                    .winRatioNm {
+                        margin-left: 5px;
+                    }
+                    .winRatioSpecial {
+                        color: #c6443e;
+                        margin-left: 5px;
+                    }
+                }                                
+            }            
+        }      
+
+        .favoriteChampions {
+            margin : 12px 12px 12px 12px ;
+            .emptyChampionWrapper {
+                margin-bottom: 10px;
+                display: flex;
+                .emptyChampionDescription{
+                    position: relative;
+                    top : 10px ;
+                    margin-left: 10px;
+                    color: #999999;
+                }
+            }
+            .championInfoUnit {
+                display: flex;
+                margin : 0 0 10px 0 ;
+                .championImg {
+                    width: 34px;
+                    height: 34px;   
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin  : 0 10px 0 0;
+                }       
+                .winRatioNm {
+                    // color: #c6443e;
+                    font-weight: bold;
+                    margin-right : 5px ;
+                }
+                .winRatioGreat {
+                    color: #c6443e;
+                    font-weight: bold;
+                    margin-right : 5px ;
+                }                
+                .championKda {
+                    color :#cdd2d2;
+                }
+                .infos{
+                    .championName {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #333333;
+                    }   
+                    .championStatistics {
+                        display: flex;
+                        .winAndLose {
+                            color :#555555;
+                            margin-right: 10px;
+                            padding-right : 10px ;
+                            border-right: 1px solid #cdd2d2 ;
+                        }        
+                        .kdaOver6 {
+                            color : #c6443e
+                        }
+                        .kdaNm {
+                        }
+                    }    
+                } 
+            }                         
+        }
+
+        .favoritePosition {
+            .favoritePositionTitle {
+                font-size:  12px ;
+                color : #666666 ;
+                line-height: 55px;                
+            }
+            .positionInfoWrapper {
+                display: flex;
+                margin-bottom : 15px ;
+                .positionImg {
+                    width: 28px;
+                    height: 28px;
+                }
+            }                             
+            .positionInfoDetail {
+                margin-left: 10px;
+        
+                .positionName {
+                    font-weight: bold;
+                    color: #333333;
+                    font-size: 14px;
+                }
+
+                .PositionStatContent{
+                    display: flex;
+                        
+                    .roleRate{
+                        color: #1f8ecd;
+                        font-weight: bold;
+                    }
+                    .positionWinRatioWrapper{
+                        display: flex;
+                        margin-left: 10px;
+                        border-left : 1px solid #666666; 
+                        padding-left: 5px;
+                        .positionWinRate{
+                            font-weight: bold;   
+                            margin-left: 3px;
+                        }
+                    }
+                }   
+            }
+        }        
+    }
+}

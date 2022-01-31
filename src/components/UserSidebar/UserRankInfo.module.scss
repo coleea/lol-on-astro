@@ -1,0 +1,47 @@
+.wrapper {
+    color : #879292;
+    img {
+        position: relative;
+        top : 20px;
+        margin : 0 10px 0 10px ;
+        width: 104px;
+        height: 104px;
+    }
+
+    .rankInfo,.solRankInfo, ._5on5RankInfo {
+        display: flex;    
+        border: 1px solid #cdd2d2;
+        box-shadow: 0 1px #dcdfdf;
+        background: #f2f2f2;
+        border-radius: 2px;
+        font-size: 11px;
+        width: 100%;
+        height: 140px;
+
+        .userInfo {
+            position: relative;
+            top : 10px ;
+            margin : 10px 0 0px 0;
+            line-height: 1.9em;
+            .tierRank {
+                font-size: 15px;
+                font-weight: bold;
+                color: #1f8ecd;
+            }                
+            
+            .lpAndWinLose {
+                display: flex;
+                flex-direction: row;
+    
+                .lp {
+                    color: #555e5e;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+    .solRankInfo {
+        margin-bottom: 10px;
+    }   
+}

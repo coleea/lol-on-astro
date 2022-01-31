@@ -1,0 +1,19 @@
+body {
+  font-family: 'Helvetica', Sans-Serif; 
+  background-color: #eaeaea;
+  font-size: 12px;
+  margin : 0 ;
+
+    #app {
+      max-width: 1440px;
+      margin : auto;
+      
+      #body {
+    
+          #main {
+            display: flex;  
+            margin-left: 11%;
+          }    
+      }
+    }    
+}

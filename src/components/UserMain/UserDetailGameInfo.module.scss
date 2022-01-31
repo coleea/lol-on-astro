@@ -1,0 +1,273 @@
+.wrapper {
+    font-size: 11px;
+    color : #555555;   
+
+    .typeWin {
+        background: #b0ceea    ;
+    }    
+    .typeLose {
+        background: #d6b5b2   ;
+    }
+
+    .detailGameInfo{
+        display: grid;
+        grid-template-columns: 70px 100px 113.5px 90px 113.5px 170.5px 1fr ;
+        height: 98px;
+        overflow: hidden;
+        border: 1px solid #cdd2d2;
+        margin-bottom: 10px;    
+
+        .gameStats {
+            position: relative;
+            top : 3px ;
+            text-align: center;
+            padding : 10px 0 10px 0 ;
+            display: flex;
+            flex-direction: column;
+            line-height: 18px;
+            .gameType {
+                color: #555555 ;
+                font-weight: bold;
+            }
+            .gameStatsUpper:after {
+                content: "";
+                border-bottom: 1px solid #d0a6a5 ;
+                width: 60%;
+                display: block;
+                margin:  2px auto ;
+                padding : 0    
+              }
+            
+            .isWinWrapper {
+                .win {
+                    color : #2c709b;
+                    font-weight: bold;
+                }
+                .lose {
+                    color : #d0021b ;
+                    font-weight: bold;
+                }
+            }
+        }
+        
+        .statsBtnWin {
+            display: block;
+            width: 30px;
+            position: relative;
+            cursor: pointer;
+            background: #7fb0e1;
+            border : 1px solid #549dc7;
+        }
+        
+        .statsBtnLose {
+            display: block;
+            width: 30px;
+            position: relative;
+            cursor: pointer;
+            background: #e89c95;
+            border : 1px solid #c8817c;
+         }
+
+         .statsBtnLose, .statsBtnWin{
+            .statBtnImg {
+                position: relative;
+                left : 8px;
+                top : 80px;
+            }            
+         }
+         
+        .gameSettingInfoWrapper {
+            margin : 15px 0 0 0;
+            .gameSettingInfo { 
+                display: flex;
+                .championImg {
+                    width: 46px;
+                    height: 46px;
+                    vertical-align: middle;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 3px;
+                }                
+            }
+            .championEngName  {
+                position: relative;
+                top : 5px;
+                text-align: center;
+                color: #555555;
+            }            
+            .spellImg {
+                width: 22px;
+                height: 22px;   
+            }            
+        } 
+        .kdaWrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            .kda {
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                .death {
+                    color : #d0021b;
+                }
+                .kill::after , .death::after{
+                    content: " / ";
+                    color : #555e5e;
+                }
+            }
+            .kdaCalculate {
+                .kda {
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+        
+            .badge {
+                display: flex;
+                justify-content: center;
+                margin-top: 8px;
+                
+                .multiKillBadge {
+                    margin-right: 5px;
+                    background: #ee5a52;
+                    border: 1px solid #c6443e;
+                    border-radius: 15px;
+                    padding: 2px 5px;
+                    line-height: 1;
+                   font-size: 10px;
+                    color: #f2f2f2;   
+                    width: max-content;
+                    height: 13px;
+                    line-height: 13px;
+                    margin-bottom: 5px;
+                }
+                
+                .aceBadge {
+                    border: 1px solid #c6443e;
+                    padding: 2px 5px;
+                    border-radius: 9px;
+                    background-color: #8c51c5;
+                    border: solid 1px #7f3590;
+                    font-size: 10px;
+                    color: #f2f2f2;   
+                    width: max-content;
+                    height: 13px;
+                    line-height: 13px;
+                }    
+            }    
+        }
+        
+        .statsWrapper {
+            display: flex;
+            flex-direction: column ;
+            line-height: 20px;
+            text-align: center;
+            margin-top: 13px;
+            color : #555e5e;
+            .killInvolvement {
+                color : #d0021b
+            }    
+        }        
+        .itemsWrapper {
+            margin-top: 17px;
+            margin-right: 10px;
+            .items {
+                display: grid;
+                grid-template-areas: 
+                    "a b c d"
+                    "e f g h" ;
+                // grid-gap: .1rem;
+                width: 100%;
+                .itemImg {     
+                    width: 22px;
+                    height: 22px;
+                    margin : 0 ;
+                    padding : 0 ;
+                }
+                
+                .item {
+                    margin : 0 ;
+                    padding : 0 ; 
+                    width: 22px;
+                    height: 22px;
+                    margin-bottom: 3px;
+                }
+            }
+
+            .visionWardWrapper  {
+                text-align: center;
+                font-size: 11px;
+                font-weight: bold;
+                .wardImg{
+                    position: relative ;
+                    top : 3px;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 5px;
+                }    
+            }                                
+        }        
+        .followPlayers {
+            display: flex;
+            font-size: 11px;
+
+            .teamMemberWrapper {
+                display: flex;       
+                .teamMemberImg {
+                    width: 16px;
+                    height: 16px;
+                }
+                
+                .teamMemberName {
+                    height: 12px;
+                    width: 70px;
+                    overflow: hidden;        
+                    text-overflow: ellipsis;
+                    white-space:nowrap;
+                }
+            }            
+        }        
+    }    
+}
+
+.itemToolTipUpperSide {
+    position : absolute ; 
+    z-index: 9;
+    background : black;
+    color: white;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.itemToolTipUpperSide::after {
+    border-top:10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+}
+
+.itemToolTipBottomSide {
+    position : absolute ; 
+    z-index: 9;
+    background : black;
+    color: white;
+    padding: 10px;
+    max-width: 300px;
+    
+}
+
+.itemToolTipBottomSide::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    content:"";
+    position:absolute;
+    top : -10px;
+    left:50%;
+}

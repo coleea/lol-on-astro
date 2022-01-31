@@ -1,0 +1,22 @@
+{
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.22.20"
+  },
+  "dependencies": {
+    "@astrojs/renderer-react": "^0.4.1",
+    "@testing-library/react": "^12.1.2",
+    "d3": "^7.3.0",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "recoil": "^0.6.1"
+  }
+}

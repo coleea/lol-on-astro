@@ -1,0 +1,77 @@
+.outerWrapper {
+    border-bottom: 1px solid #c6cbcb;
+    margin-bottom: 20px;
+
+    .wrapper {
+        width: 1050px;
+        min-height: 20vh;
+        margin : auto ;
+        padding-top: 20px;
+      
+        .pastRankList {
+            display: flex;        
+            margin-bottom: 20px;
+            
+            .pastRankItem {
+                display: inline-block;
+                padding: 3px 4px 2px 4px;
+                margin-right: 3px;
+                background: #e0e3e3;
+                color: #657070;
+                font-size: 11px;
+                border: 1px solid #ced3d3;
+                border-radius: 3px;
+            }
+        }        
+        .userSummaryWrapper {
+            display: grid;
+            grid-template-columns: 130px 2fr;
+
+            .userPic {
+                .profileBorder {
+                    position: absolute;
+                    margin-left: -110px;
+                    margin-top: -10px;
+                }
+            
+                .level {
+                    position: relative;
+                    left: 38%;
+                    margin-top: -14px;
+                    margin-left: -20px;
+                    width: 44px;
+                    height: 24px;
+                    padding-top: 3px;
+                    box-sizing: border-box;
+                    background: url(https://opgg-static.akamaized.net/images/site/summoner/bg-levelbox.png);
+                    background-size: 100%;
+                    line-height: 17px;
+                    font-family: Helvetica,AppleSDGothic,"Apple SD Gothic Neo",AppleGothic,Arial,Tahoma;
+                    font-size: 14px;
+                    text-align: center;
+
+                    color: #eabd56;
+                    z-index: 9999;
+                }    
+            }       
+            .userInfo {
+                position: relative;
+                top : -5px;
+                
+                .userId {
+                    font-family: 'Apple SD Gothic Neo';
+                    color: #242929;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-right: 4px;
+                }
+                .userLadderInfo {
+                    .userRanking {
+                        color: #657070;
+                        font-weight: bold;
+                    }                    
+                }
+            }            
+        }
+    }    
+}
