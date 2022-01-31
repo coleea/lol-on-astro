@@ -43,8 +43,8 @@ function PastRanks({userHeaderInfo}){
 function UserPic({userHeaderInfo}){
     return (
         <div className={css.userPic}>
-            <img src={userHeaderInfo.profileBackgroundImageUrl} width={100} height={100}></img>
-            <img className={css.profileBorder} src={userHeaderInfo.profileBorderImageUrl} width={120} height={120}></img>
+            <img alt="유저 이미지" src={userHeaderInfo.profileBackgroundImageUrl} width={100} height={100}></img>
+            <img alt="유저 이미지의 보더" className={css.profileBorder} src={userHeaderInfo.profileBorderImageUrl} width={120} height={120}></img>
             <p className={css.level} title="레벨">{userHeaderInfo.level}</p>
         </div>        
     )

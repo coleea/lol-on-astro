@@ -166,7 +166,7 @@ export default function UserDetailGameInfo({matchHistoryDetailInfo}) {
                                 <FollowPlayers matchInfo={matchInfo} />                                
                                 
                                 <div className={CSSStatsBtn}>                                    
-                                    <img className={css.statBtnImg} 
+                                    <img alt="게임의 승리 또는 패배 아이콘" className={css.statBtnImg} 
                                             src={matchInfo.isWin ? ICON_URL.BTN_WIN : ICON_URL.BTN_LOSE}></img>
                                 </div>                             
                             </div>
@@ -204,13 +204,13 @@ function GameSettingInfo({matchInfo, championEngName}){
         <div className={css.gameSettingInfoWrapper}>
             <div className={css.gameSettingInfo}>
                 <div>
-                    <img className={css.championImg} src={matchInfo.champion.imageUrl}></img>
+                    <img alt="챔피언 이미지" className={css.championImg} src={matchInfo.champion.imageUrl}></img>
                 </div>
                 <div>
                     {matchInfo.spells.map((spell,spellIdx)=> {
                         return (
                             <div key={spellIdx}>
-                                <img className={css.spellImg} src={spell.imageUrl}></img>
+                                <img alt="스펠 이미지" className={css.spellImg} src={spell.imageUrl}></img>
                             </div>
                         )
                     })}                                    
@@ -219,7 +219,7 @@ function GameSettingInfo({matchInfo, championEngName}){
                     {matchInfo.peak.map((peak, peakIdx)=> {
                         return (
                             <div key={peakIdx}>
-                                <img className={css.spellImg} src={peak}></img>                                                    
+                                <img alt="피크 이미지" className={css.spellImg} src={peak}></img>                                                    
                             </div>
                         )
                     })}
@@ -270,7 +270,7 @@ function Items({matchInfo, showItemToolTip, hideItemToolTip,blankItemNumber,isWi
                             onMouseEnter={showItemToolTip} 
                             onMouseLeave={hideItemToolTip} 
                             itemnumber={itemNumber}>
-                            <img className={css.itemImg} src={item.imageUrl}></img>
+                            <img alt="아이템 이미지" className={css.itemImg} src={item.imageUrl}></img>
                         </div>
                     )   
                 })}
@@ -278,15 +278,15 @@ function Items({matchInfo, showItemToolTip, hideItemToolTip,blankItemNumber,isWi
                     [...Array(blankItemNumber)].map((blankItem, blankItemIdx)=> {
                         return (
                             <div key={blankItemIdx}>
-                                <img  className={css.itemImg} src="/item_blank_icon.png"></img>                                                    
+                                <img alt="아이템이 없음" className={css.itemImg} src="/item_blank_icon.png"></img>                                                    
                             </div>
                         )
                     })
                 }
-                <img className={css.itemImg} src={isWin === '승리' ? ICON_URL.BUILD_BLUE : ICON_URL.BUILD_RED}></img>
+                <img alt="승리팀 또는 패배팀의 아이콘" className={css.itemImg} src={isWin === '승리' ? ICON_URL.BUILD_BLUE : ICON_URL.BUILD_RED}></img>
             </div>
             <div className={css.visionWardWrapper}>
-                <img className={css.wardImg} src={isWin === '승리' ? ICON_URL.WARD_BLUE : ICON_URL.WARD_RED}></img> 
+                <img alt="승리팀 또는 패배팀의 와드 아이콘" className={css.wardImg} src={isWin === '승리' ? ICON_URL.WARD_BLUE : ICON_URL.WARD_RED}></img> 
                 제어 와드 {visionWardsBought}
             </div>
         </div>             

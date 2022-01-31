@@ -196,7 +196,7 @@ function ChampionInfos({latest20SummaryInfo, emptyChampionCount,}) {
             return (
                 <div className={css.championInfoUnit} key={i}>
                     <div >
-                        <img className={css.championImg} src={v.imageUrl}></img>                                        
+                        <img alt="챔피언의 이미지" className={css.championImg} src={v.imageUrl}></img>                                        
                     </div>
                     <div className={css.infos}>
                         <div className={css.championName}>
@@ -217,7 +217,7 @@ function ChampionInfos({latest20SummaryInfo, emptyChampionCount,}) {
                     <div key={i}>
                         <div className={css.emptyChampionWrapper}>
                             <div className={css.emptyChampionImgWrapper}>
-                                <img className={css.emptyChampionImg} src="/emptyChampion.png"></img>
+                                <img alt="챔피언 정보가 없음" className={css.emptyChampionImg} src="/emptyChampion.png"></img>
                             </div>
                             <div className={css.emptyChampionDescription}>
                                 챔피언 정보가 없습니다.

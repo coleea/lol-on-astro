@@ -32,7 +32,7 @@ export default function UserMain() {
                                                                                 css.solRankInfo 
                                                                               : css._5on5RankInfo}>
                                 <div className={css.tierRank}>
-                                    <img alt="tierRank" src={rankType.tierRank.imageUrl}></img>
+                                    <img alt="티어 랭크" src={rankType.tierRank.imageUrl}></img>
                                 </div>
                                 <div className={css.userInfo}>
                                     <div>{matchTypeName} 랭크</div>

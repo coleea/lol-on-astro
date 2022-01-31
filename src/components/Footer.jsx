@@ -26,7 +26,7 @@ export default function Footer() {
                 </div>
                 <div className={css.snsWrapper}>
                     {snsURLs.map((snsURL, i) => 
-                         <div key={i}><img src={snsURL}></img></div>
+                         <div key={i}><img alt={"SNS의 아이콘"} src={snsURL}></img></div>
                     )}                    
                 </div>            
             </div>    

@@ -332,7 +332,7 @@ function InputQuery({processUserSearch, doKeyInputCallback, searcBarRef}){
                     autoComplete='off'>
                 </input>
                 <button className={css.submitBtn} type='submit'>
-                    <img src="/opgg_search_submit.png"></img>
+                    <img alt="롤 유저 검색" src="/opgg_search_submit.png"></img>
                 </button>
             </form>
         </div>        
@@ -357,11 +357,11 @@ function QueryHistory({queryHistory, favoriteUsers, queryUser, toggleFavorite, r
                             </div>
                             <div className={css.favoriteMark} onMouseDown={toggleFavorite} username={userName}>
                                 {isFavorite ? 
-                                    <img className={userName + ' ' + 'favoriteOn'} src={URL_IMG_FOR_FAVORITE_ON}></img>
-                                    : <img className={userName + ' ' + 'favoriteOff'} src={URL_IMG_FOR_FAVORITE_OFF}></img>}
+                                    <img alt="유저가 즐겨찾기에 등록되어 있음" className={userName + ' ' + 'favoriteOn'} src={URL_IMG_FOR_FAVORITE_ON}></img>
+                                    : <img alt="유저가 즐겨찾기에 등록되어 있지 않음" className={userName + ' ' + 'favoriteOff'} src={URL_IMG_FOR_FAVORITE_OFF}></img>}
                             </div>
                             <div className={css.removeMark} onMouseDown={removeUserFromHistory} username={userName}>
-                                <img src={URL_IMG_FOR_X_BTN}></img>
+                                <img alt="유저를 즐겨찾기에서 해제하기" src={URL_IMG_FOR_X_BTN}></img>
                             </div>
                         </div>
                     </div>                                   
@@ -399,7 +399,7 @@ function FavoriteUsers({favoriteUsers, queryUser, removeFromFavorite}){
                         {user}
                     </div>
                     <div className={css.removeMark} userName={user} onMouseDown={removeFromFavorite}>
-                        <img src="/x_btn.png"></img>      
+                        <img alt="유저를 즐겨찾기에서 해제하기"  src="/x_btn.png"></img>      
                     </div>
                 </div>
             )
@@ -417,7 +417,7 @@ function SearchAutocomplete({autocompleteEntries, queryUser}){
                     <div key={entryIdx}>
                         <div className={css.autoCompleteItem} onMouseDown={()=> queryUser({username : entry.name}) }>                    
                             <div className={css.autoCompleteUserImgWrapper}>
-                                <img  className={css.autoCompleteUserImg} src={profileURL}></img>
+                                <img alt="자동완성된 유저의 이미지" className={css.autoCompleteUserImg} src={profileURL}></img>
                             </div>
                             <div className={css.autoCompleteUserInfoWrapper}>
                                 <div className={css.autoCompleteUserName}>{entry.name}</div>
