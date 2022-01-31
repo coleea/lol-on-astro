@@ -8,26 +8,15 @@ import { useParams } from "react-router-dom";
 
 const l = console.log 
 
+const URL_FOR_AUTOCOMPLETE_SERVER = import.meta.env.PUBLIC_URL_FOR_AUTOCOMPLETE_SERVER ;
 const INITIAL_USER_QUERY          = 'Hello User'
 const URL_TEMPLATE_BASIC_INFO     = `https://codingtest.op.gg/api/summoner/USERNAME`
 const URL_TEMPLATE_MOST_INFO      = `https://codingtest.op.gg/api/summoner/USERNAME/mostInfo`
 const URL_TEMPLATE_MATCHES        = `https://codingtest.op.gg/api/summoner/USERNAME/matches`
 const URL_TEMPLATE_MATCH_DETAILS  = `https://codingtest.op.gg/api/summoner/USERNAME/matchDetail/`
-const URL_BASE_FOR_AUTOCOMPLETE   = 'https://raw.githubusercontent.com/coleea/lol-src/master/api/autocomplete_fake.json'
-const URL_FOR_AUTOCOMPLETE_SERVER = import.meta.env.PUBLIC_URL_FOR_AUTOCOMPLETE_SERVER
-l('URL_FOR_AUTOCOMPLETE_SERVER', URL_FOR_AUTOCOMPLETE_SERVER)
-
-async function fetchForAutocomplete(username){
-    const AUTOCOMPLETE_URL = URL_FOR_AUTOCOMPLETE_SERVER + 'username=' + username
-    const res = await fetch(AUTOCOMPLETE_URL).then(r=>r.json())
-    const autocompleteEntries = (res.length > 0 ) ?
-                                                res[0].groups[0].items : 
-                                                []
-    return autocompleteEntries
-}
+const URL_BASE_FOR_AUTOCOMPLETE   = `https://raw.githubusercontent.com/coleea/lol-src/master/api/autocomplete_fake.json`;
 
 export default function Header() {
-    l('import.meta.env', import.meta.env.PUBLIC_DB_TYPE)
 
     const params = useParams()
     const username = params.username
@@ -440,4 +429,23 @@ function SearchAutocomplete({autocompleteEntries, queryUser}){
             })}                 
         </div>       
     )
+}
+
+
+
+async function fetchForAutocomplete(username){
+    const AUTOCOMPLETE_URL = URL_FOR_AUTOCOMPLETE_SERVER + 'username=' + username
+    const res = await fetch(AUTOCOMPLETE_URL).then(r=>r.json())
+    let autocompleteEntries ;
+    
+    if(res.length > 0 ) {
+        autocompleteEntries =  res[0].groups[0].items ;
+    } else {
+        autocompleteEntries = [];
+    }
+    
+
+
+
+    return autocompleteEntries
 }

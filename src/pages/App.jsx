@@ -11,9 +11,16 @@ const l = console.log
 
 function App() {
   
-  l('import.meta.env', import.meta.env.PUBLIC_DB_TYPE)
-  l('import.meta.env', import.meta.env.PUBLIC_DB_TYPE)
 
+
+
+
+
+
+
+
+
+  
   const initLocalStorage = _ => {
     localStorage.queryHistory = localStorage.queryHistory || '[]'
     localStorage.favoriteUsers = localStorage.favoriteUsers || '[]'
