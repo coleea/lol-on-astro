@@ -11,9 +11,8 @@ export default function UserHeader() {
 
     return (
         <>
-            {
-                userHeaderInfo && 
-                <div className={css.outerWrapper}>
+            <div className={css.outerWrapper}>
+            {userHeaderInfo &&                     
                     <div className={css.wrapper}>
                         <PastRanks userHeaderInfo={userHeaderInfo}/>
                         <div className={css.userSummaryWrapper}>
@@ -21,8 +20,8 @@ export default function UserHeader() {
                             <UserInfo userHeaderInfo={userHeaderInfo} />               
                         </div>
                     </div>
-                </div>
             }           
+            </div>
         </>
     )
 }

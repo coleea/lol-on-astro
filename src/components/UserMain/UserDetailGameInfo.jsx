@@ -303,7 +303,7 @@ function FollowPlayers({matchInfo, }){
                     return (
                         <div className={css.teamMemberWrapper} key={playerIdx}>
                             <div>
-                                <img className={css.teamMemberImg} src={player.champion.imageUrl}></img>
+                                <img alt="챔피언의 이미지" className={css.teamMemberImg} src={player.champion.imageUrl}></img>
                             </div>                                                    
                             <div className={css.teamMemberName}>{playerName}</div>
                         </div>
@@ -316,7 +316,7 @@ function FollowPlayers({matchInfo, }){
                     return (
                         <div className={css.teamMemberWrapper} key={playerIdx}>
                             <div >
-                                <img className={css.teamMemberImg} src={player.champion.imageUrl}></img>
+                                <img alt="챔피언의 이미지" className={css.teamMemberImg} src={player.champion.imageUrl}></img>
                             </div>                                                    
                             <div className={css.teamMemberName}>{playerName}</div>
                         </div>

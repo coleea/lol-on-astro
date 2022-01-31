@@ -11,16 +11,7 @@ const l = console.log
 
 function App() {
   
-
-
-
-
-
-
-
-
-
-  
+ 
   const initLocalStorage = _ => {
     localStorage.queryHistory = localStorage.queryHistory || '[]'
     localStorage.favoriteUsers = localStorage.favoriteUsers || '[]'
@@ -42,7 +33,6 @@ function App() {
                     <UserMain/>
                   </div>      
                 </div>       
-                <Footer/>
             </div>
         </RecoilRoot>
     </>

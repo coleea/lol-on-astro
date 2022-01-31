@@ -24,24 +24,26 @@ export default function UserMain({}) {
 
     return (
         <>
-            <WinRatioToggleBar toggleviewtype={toggleviewtype} viewtype={viewtype} />
-            {userSidebarInfo && (
-                <>
-                    <div className={css.wrapper}>
-                        {viewtype === viewTypes.general && 
-                            winRatioFreeSeason && 
-                            winRatioFreeSeason.map((matchInfos,matchInfosIdx)=> 
-                                <ChampionWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
-                            )
-                        }
-                        {viewtype === viewTypes._7days && 
-                            winRatio7Days.map((matchInfos,matchInfosIdx)=> 
-                                <_7daysWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
-                            )
-                        }
-                    </div>             
-                </>
-            )}
+            <div className={css.outerWrapper}>
+                <WinRatioToggleBar toggleviewtype={toggleviewtype} viewtype={viewtype} />
+                {userSidebarInfo && (
+                    <>
+                        <div className={css.wrapper}>
+                            {viewtype === viewTypes.general && 
+                                winRatioFreeSeason && 
+                                winRatioFreeSeason.map((matchInfos,matchInfosIdx)=> 
+                                    <ChampionWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
+                                )
+                            }
+                            {viewtype === viewTypes._7days && 
+                                winRatio7Days.map((matchInfos,matchInfosIdx)=> 
+                                    <_7daysWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
+                                )
+                            }
+                        </div>             
+                    </>
+                )}
+            </div>
         </>
     )
 }
