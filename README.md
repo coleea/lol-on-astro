@@ -9,8 +9,8 @@
 node.js 버전 17.4.0이 필요합니다
 
 ## 웹에서 실행하기
-- `https://lol-on.astro.devkr.info`에서 이용이 가능합니다
-- `https://lol-on.astro.devkr.info/?user={username}` 형태로 유저네임을 직접 검색할 수 있습니다
+- `https://lol-on-astro.devkr.info` 에서 이용이 가능합니다
+- `https://lol-on-astro.devkr.info/?user={username}` 형태로 유저네임을 직접 검색할 수 있습니다
 
 
 ## 라이트하우스 스코어
