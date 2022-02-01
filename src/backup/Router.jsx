@@ -1,4 +1,4 @@
-import App from './App'
+import App from '../components/App'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 export default () => {
