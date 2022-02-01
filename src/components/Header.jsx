@@ -1,10 +1,8 @@
-import { getDefaultNormalizer } from '@testing-library/react'
 import { useRef, useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import {basicInfoAtom, mostInfoAtom, matchesAtom, 
     userHeaderInfoAtom, userSidebarInfoAtom, latest20SummaryInfoAtom, matchHistoryDetailInfoAtom} from '../recoil/summonerInfo'
 import css from './Header.module.scss'
-import { useParams } from "react-router-dom";
 
 const l = console.log 
 
@@ -18,14 +16,11 @@ const URL_BASE_FOR_AUTOCOMPLETE   = `https://raw.githubusercontent.com/coleea/lo
 
 export default function Header() {
 
-    const params = useParams()
-    const username = params.username
-
-    const [queryHistory, setQueryHistory] = useState(JSON.parse(localStorage.queryHistory || '[]'))
-    const [favoriteUsers, setFavoriteUsers] = useState(JSON.parse(localStorage.favoriteUsers || '[]'))
+    const [queryHistory, setQueryHistory]    = useState(JSON.parse(localStorage.queryHistory || '[]'))
+    const [favoriteUsers, setFavoriteUsers]  = useState(JSON.parse(localStorage.favoriteUsers || '[]'))
     const [isInputExists, setIsInputExists]  = useState(false)
-    const [isSearchbarFocused, setIsSearchbarFocused] = useState(false)
-    const [historyViewType, setHistoryViewType] = useState('latestSearch')
+    const [isSearchbarFocused, setIsSearchbarFocused]    = useState(false)
+    const [historyViewType, setHistoryViewType]          = useState('latestSearch')
     const [autocompleteEntries , setAutocompleteEntries] = useState([])
     
     const searchHistoryWrapperRef = useRef(null)
@@ -42,7 +37,10 @@ export default function Header() {
     const [matchHistoryDetailInfo, setMatchHistoryDetailInfo]  = useRecoilState(matchHistoryDetailInfoAtom)    
 
     useEffect(() => {
-        l('헤더 호출')
+
+        const urlParams = new URLSearchParams(location.search) 
+        const username = urlParams.get('user')
+        
         if(username){
             getDataAndSetState(username) 
             const queryHistoryArrRenewed = saveQueryToDB(username)
@@ -50,6 +48,7 @@ export default function Header() {
         } else {
             getDataAndSetState(INITIAL_USER_QUERY)
         }
+
     }, [])
     
     const requestMatchHistoryDetail = async ({USER_QUERY, matches}) => {
@@ -443,9 +442,5 @@ async function fetchForAutocomplete(username){
     } else {
         autocompleteEntries = [];
     }
-    
-
-
-
     return autocompleteEntries
 }

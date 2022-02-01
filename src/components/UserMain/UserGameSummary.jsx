@@ -3,6 +3,7 @@ import css from './UserGameSummary.module.scss'
 import { latest20SummaryInfoAtom } from '../../recoil/summonerInfo'
 import { useEffect, useState } from 'react'
 import * as d3 from 'd3';
+// import { scaleOrdinal, pie , select, arc} from 'd3-format';
 
 const l = console.log 
 

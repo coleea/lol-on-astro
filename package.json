@@ -16,6 +16,7 @@
     "@astrojs/renderer-react": "^0.4.1",
     "@testing-library/react": "^12.1.2",
     "d3": "^7.3.0",
+    "d3-format": "^3.1.0",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "recoil": "^0.6.1"

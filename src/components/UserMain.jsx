@@ -85,7 +85,7 @@ export default function UserMain() {
             currentUserSummary.champions.push(championObj)
         }
     
-        championObj.games++
+        championObj.games++;
         gameInfo.isWin ? championObj.wins++ 
                        : championObj.losses++
         championObj.winRatio = (championObj.wins / championObj.games * 100).toFixed(0) + '%'
@@ -193,7 +193,7 @@ export default function UserMain() {
         const userPositionStr = positionIdxToStrMapper[userPositionIdx]
         const gamePosition = currentUserSummary.favoritePositionCounter[userPositionStr]
         gamePosition.games++
-        (gameInfo.isWin) ? gamePosition.wins++ : gamePosition.losses++         
+        gameInfo.isWin ? gamePosition.wins++ : gamePosition.losses++         
         gamePosition.winRatio = (gamePosition.wins / gamePosition.games * 100).toFixed(0) + '%'        
         return currentUserSummary
     }
