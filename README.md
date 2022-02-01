@@ -15,13 +15,13 @@ node.js 버전 17.4.0이 필요합니다
 
 ## 라이트하우스 스코어
 
-전) create-react-app버전의 라이트하우스 스코어
+전) create-react-app@netlify 버전의 라이트하우스 스코어
 
 ![라이트하우스 전](./githubFile/lighthouse_before.png)
 
 
 
-후) astro버전의 라이트하우스 스코어
+후) astro@cloudflare pages 버전의 라이트하우스 스코어
 
 ![라이트하우스 후](./githubFile/lighthouse_after.png)
 
@@ -41,3 +41,7 @@ Cumulative Layout Shift는 직접 최적화 하였습니다
 <br/>
 <img src="./githubFile/sass_logo.svg" height="200px" />
 <img src="./githubFile/cf_pages_logo.png" height="200px" />
+
+
+## further study
+- remix 버전으로 리팩토링하여 퍼포먼스를 비교합니다
