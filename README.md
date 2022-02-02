@@ -12,36 +12,42 @@
 node.js 버전 17.4.0이 필요합니다
 
 ## 웹에서 실행하기
-- `https://lol-on-astro.devkr.info` 에서 이용이 가능합니다
+- 클라우드플레어 버전은 `https://lol-on-astro.devkr.info` 에서 이용이 가능합니다
 - `https://lol-on-astro.devkr.info/?user={username}` 형태로 유저네임을 직접 검색할 수 있습니다
+- fastly 버전은 `http://lol-on-fastly.devkr.info/` 에서 이용이 가능합니다
+- `https://lol-on-fastly.devkr.info/?user={username}` 형태로 유저네임을 직접 검색할 수 있습니다
 
 
-## 퍼포먼스 비교
+## 퍼포먼스 비교 (i7-2600 @ 크롬 97.0.4692.99에서 수행되었습니다)
 
 <table>
     <tr>
         <td>지표</td>
         <td>이전 (create-react-app @ netlify)</td>
         <td>이후 (astro @ cloudflare pages)</td>
+        <td>이후 (astro @ fastly)</td>
     </tr>
     <tr>
         <td>TTFB</td>
-        <td>239.39 ~ 487.47 ms</td>
-        <td>13.94 ~ 22.54ms</td>
+        <td>84.4 ~ 487.4 ms</td>
+        <td>13.9 ~ 22.5ms</td>
+        <td>3.2 ~ 3.5 ms</td>
     </tr>
     <tr>
-        <td>DOMContentLoaded</td>
+        <td>DOMContentLoaded 이벤트 트리거</td>
         <td>1004 ~ 2120 ms</td>
-        <td>304 ~354 ms</td>
+        <td>304 ~ 354 ms</td>
+        <td>227ms ~ 271 ms</td>
     </tr>    
     <tr>
-        <td>Load</td>
+        <td>Load 이벤트 트리거</td>
         <td>1710 ~ 2910 ms</td>
         <td>357 ~ 414 ms</td>
+        <td>271 ~ 317 ms</td>
     </tr>        
 </table>
 
-## 라이트하우스 스코어
+## 라이트하우스 스코어  (m1 맥미니에서 수행되었습니다)
 
 전) create-react-app @ netlify 버전
 
