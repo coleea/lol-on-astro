@@ -18,7 +18,7 @@ node.js 버전 17.4.0이 필요합니다
 - `https://lol-on-fastly.devkr.info/?user={username}` 형태로 유저네임을 직접 검색할 수 있습니다
 
 
-## 퍼포먼스 비교 (i7-2600 @ 크롬 97.0.4692.99에서 수행되었습니다)
+## 퍼포먼스 비교 (CDN 캐쉬히트 기준. i7-2600 @ 크롬 97.0.4692.99에서 수행되었습니다)
 
 <table>
     <tr>
@@ -31,19 +31,19 @@ node.js 버전 17.4.0이 필요합니다
         <td>TTFB</td>
         <td>84.4 ~ 487.4 ms</td>
         <td>13.9 ~ 22.5ms</td>
-        <td>3.2 ~ 3.5 ms</td>
+        <td><b style="color:red"> 3.2 ~ 3.5 ms</b></td>
     </tr>
     <tr>
-        <td>DOMContentLoaded 이벤트 트리거</td>
-        <td>1004 ~ 2120 ms</td>
-        <td>304 ~ 354 ms</td>
-        <td>227ms ~ 271 ms</td>
+        <td><del>DOMContentLoaded 이벤트 트리거</del></td>
+        <td><del>1004 ~ 2120 ms</del></td>
+        <td><del>304 ~ 354 ms</del></td>
+        <td><del>227ms ~ 271 ms</del></td>
     </tr>    
     <tr>
-        <td>Load 이벤트 트리거</td>
-        <td>1710 ~ 2910 ms</td>
-        <td>357 ~ 414 ms</td>
-        <td>271 ~ 317 ms</td>
+        <td><del>Load 이벤트 트리거</del></td>
+        <td><del>1710 ~ 2910 ms</del></td>
+        <td><del>357 ~ 414 ms</del></td>
+        <td><del>271 ~ 317 ms</del></td>
     </tr>        
 </table>
 
@@ -68,13 +68,14 @@ Cumulative Layout Shift는 직접 최적화 하였습니다
 - Astro
 - react
 - SASS Module
-- Cloudflare Pages
+- Cloudflare Pages & fastly
  
 <img src="./githubFile/astro_logo_big.png" height="200px" />
 <img src="./githubFile/react_logo.jpeg" height="200px" />
 <br/>
 <img src="./githubFile/sass_logo.svg" height="200px" />
 <img src="./githubFile/cf_pages_logo.png" height="200px" />
+<img src="./githubFile/fastly-logo.png" height="200px" />
 
 
 ## further study
