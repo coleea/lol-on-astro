@@ -1,4 +1,4 @@
-# 롤 전적검색 astro버전
+# 📌 롤 전적검색 astro버전 📌
 
 ## 설명
 - create-react-app기반의 앱을 astro버전으로 리팩토링한 롤 전적검색 앱입니다
@@ -6,6 +6,9 @@
 
 ## 실행방법 
 본 리포지토리를 git clone으로 다운받은 후 `npm i && npm run dev`를 입력합니다\
+\
+또는 `pnpm i && pnpm dev`를 입력합니다\
+\
 node.js 버전 17.4.0이 필요합니다
 
 ## 웹에서 실행하기
@@ -13,15 +16,40 @@ node.js 버전 17.4.0이 필요합니다
 - `https://lol-on-astro.devkr.info/?user={username}` 형태로 유저네임을 직접 검색할 수 있습니다
 
 
+## 퍼포먼스 비교
+
+<table>
+    <tr>
+        <td>지표</td>
+        <td>이전 (create-react-app @ netlify)</td>
+        <td>이후 (astro @ cloudflare pages)</td>
+    </tr>
+    <tr>
+        <td>TTFB</td>
+        <td>239.39 ~ 487.47 ms</td>
+        <td>13.94 ~ 22.54ms</td>
+    </tr>
+    <tr>
+        <td>DOMContentLoaded</td>
+        <td>1004 ~ 2120 ms</td>
+        <td>304 ~354 ms</td>
+    </tr>    
+    <tr>
+        <td>Load</td>
+        <td>1710 ~ 2910 ms</td>
+        <td>357 ~ 414 ms</td>
+    </tr>        
+</table>
+
 ## 라이트하우스 스코어
 
-전) create-react-app@netlify 버전의 라이트하우스 스코어
+전) create-react-app @ netlify 버전
 
 ![라이트하우스 전](./githubFile/lighthouse_before.png)
 
 
 
-후) astro@cloudflare pages 버전의 라이트하우스 스코어
+후) astro @ cloudflare pages 버전
 
 ![라이트하우스 후](./githubFile/lighthouse_after.png)
 

@@ -5,20 +5,24 @@ specifiers:
   '@testing-library/react': ^12.1.2
   astro: ^0.22.20
   d3: ^7.3.0
+  d3-format: ^3.1.0
   react-router: ^6.2.1
   react-router-dom: ^6.2.1
   recoil: ^0.6.1
+  sass: ^1.49.0
 
 dependencies:
   '@astrojs/renderer-react': 0.4.1
   '@testing-library/react': 12.1.2
   d3: 7.3.0
+  d3-format: 3.1.0
   react-router: 6.2.1
   react-router-dom: 6.2.1
   recoil: 0.6.1
 
 devDependencies:
   astro: 0.22.20
+  sass: 1.49.0
 
 packages:
 
