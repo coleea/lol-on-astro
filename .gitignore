@@ -1,7 +1,8 @@
-/dist
-
 # dependencies
 node_modules/
+
+#dist
+dist/
 
 # logs
 npm-debug.log*
